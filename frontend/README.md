@@ -1,73 +1,130 @@
-# React + TypeScript + Vite
+# Portal Web - Bolos Artesanais 🍰
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portal web desenvolvido para facilitar o gerenciamento de pedidos de bolos artesanais da Doce Encanto.
 
-Currently, two official plugins are available:
+## 🎨 Funcionalidades Implementadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Área Pública (Cliente)
+- ✅ **Home**: Página inicial com destaques da semana e call-to-action
+- ✅ **Catálogo**: Listagem de produtos com filtros (sabor, tamanho, ocasião)
+- ✅ **Encomenda**: Formulário completo para realizar pedidos
+- ✅ **Confirmação**: Tela de confirmação com número do pedido
 
-## React Compiler
+## 🚀 Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- **React 19.2.5** com TypeScript
+- **Vite 8.0** (requer Node.js 20.19+ ou 22.12+)
+- **React Router DOM** para roteamento
+- **Tailwind CSS 4.2** para estilização
+- **Axios** para comunicação com API
 
-## Expanding the ESLint configuration
+### Design System
+- **Fontes**: Poppins (principal) e Inter (secundária)
+- **Cores**:
+  - Rosa principal: `pink-600` (#ec4899)
+  - Roxo principal: `purple-600` (#a855f7)
+  - Gradientes: `from-pink-600 to-purple-600`
+- **Componentes Reutilizáveis**:
+  - Button
+  - Header (responsivo com menu hambúrguer)
+  - Footer
+  - ProductCard
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📱 Responsividade
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O projeto foi desenvolvido com breakpoints para:
+- **Mobile**: < 768px (design mobile-first)
+- **Tablet**: 768px - 1023px
+- **Desktop**: ≥ 1024px
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Características Responsivas:
+- Menu hambúrguer no mobile que expande em drawer
+- Grid de produtos adaptável (1 coluna mobile, 2 tablet, 3 desktop)
+- Filtros em painel expansível no mobile
+- Formulários otimizados para touch em dispositivos móveis
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Instalação e Execução
+
+### Pré-requisitos
+- Node.js 20.19+ ou 22.12+
+- npm ou yarn
+
+### Instalação
+```bash
+cd frontend
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Execução em Desenvolvimento
+```bash
+npm run dev
 ```
+
+O servidor será iniciado em `http://localhost:5173`
+
+### Build para Produção
+```bash
+npm run build
+```
+
+## 📂 Estrutura do Projeto
+
+```
+frontend/
+├── src/
+│   ├── components/
+│   │   ├── Button.tsx
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   └── ProductCard.tsx
+│   ├── pages/
+│   │   ├── Home.tsx
+│   │   ├── Catalog.tsx
+│   │   ├── Order.tsx
+│   │   └── Confirmation.tsx
+│   ├── services/
+│   │   └── api.ts
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+└── package.json
+```
+
+## 🎯 Especificações Técnicas
+
+### Requisitos Funcionais Implementados
+- RF01: Visualizar catálogo ✅
+- RF02: Filtrar produtos ✅
+- RF03: Realizar encomenda ✅
+- RF04: Confirmação de pedido ✅
+
+### Requisitos Não-Funcionais
+- RNF07: Design responsivo (mobile, tablet, desktop) ✅
+- RNF08: Formulário simples em uma única página ✅
+- RNF09: Linguagem acessível sem jargão técnico ✅
+
+## 🔄 Rotas Implementadas
+
+- `/` - Home
+- `/catalogo` - Catálogo de produtos
+- `/encomenda` - Formulário de encomenda
+- `/confirmacao/:orderId` - Confirmação de pedido
+
+## ⚠️ Nota sobre Versão do Node.js
+
+Este projeto utiliza Vite 8.0 que requer:
+- Node.js versão 20.19+ ou 22.12+
+
+Se você estiver usando Node.js 18.x, precisará atualizar para uma versão mais recente.
+
+## 👥 Equipe
+
+- **Tainná Andryelli Ribeiro** - Back-end e Arquitetura
+- **Bárbara Mór da Mata** - Back-end e Banco de Dados
+- **Ígor Haag Rodrigues** - Front-end e Design
+
+## 📝 Licença
+
+© 2026 Doce Encanto - Bolos Artesanais. MIT License.
+
