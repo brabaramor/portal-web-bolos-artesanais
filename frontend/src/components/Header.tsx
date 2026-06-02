@@ -6,7 +6,6 @@ export function Header() {
 
   return (
     <>
-      {/* Desktop/Tablet Header */}
       <header className="hidden md:block bg-gradient-to-r from-pink-600 to-purple-600 text-white">
         <div className="container mx-auto px-6 py-6 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
@@ -28,7 +27,6 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobile Header */}
       <header className="md:hidden bg-gradient-to-r from-pink-600 to-purple-600 text-white relative z-40">
         <div className="px-4 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
@@ -58,7 +56,6 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {menuOpen && (
           <div className="absolute left-0 right-0 bg-white shadow-2xl border-t-2 border-pink-100 z-50">
             <nav className="flex flex-col">

@@ -30,7 +30,6 @@ export function AdminProducts() {
 
       <main className="flex-1 px-4 md:px-6 lg:px-8 py-6 md:py-8">
         <div className="max-w-7xl mx-auto">
-          {/* Header Section */}
           <div className="mb-6 md:mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
               <h1 className="text-2xl md:text-3xl font-bold text-pink-900">Gerenciar Produtos</h1>
@@ -44,10 +43,8 @@ export function AdminProducts() {
             </button>
           </div>
 
-          {/* Filters Section */}
           <div className="bg-white rounded-xl shadow-sm p-4 md:p-6 mb-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Category Filter */}
               <div className="relative">
                 <select
                   value={categoryFilter}
@@ -61,7 +58,6 @@ export function AdminProducts() {
                 </select>
               </div>
 
-              {/* Search Input */}
               <div className="relative">
                 <input
                   type="text"
@@ -77,7 +73,6 @@ export function AdminProducts() {
             </div>
           </div>
 
-          {/* Products Grid - Desktop/Tablet */}
           <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {mockProducts.map((product) => (
               <div key={product.id} className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
@@ -113,7 +108,6 @@ export function AdminProducts() {
             ))}
           </div>
 
-          {/* Products List - Mobile */}
           <div className="md:hidden space-y-4 mb-6">
             {mockProducts.map((product) => (
               <div key={product.id} className="bg-white rounded-xl shadow-sm p-4">
@@ -150,7 +144,6 @@ export function AdminProducts() {
             ))}
           </div>
 
-          {/* Pagination */}
           <div className="flex justify-center gap-2">
             <button className="w-10 h-10 rounded-lg bg-pink-600 text-white font-bold">1</button>
             <button className="w-10 h-10 rounded-lg bg-white border border-gray-300 text-gray-700 hover:border-pink-400 transition-colors">2</button>

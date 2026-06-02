@@ -17,7 +17,6 @@ export function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900 p-4">
       <div className="w-full max-w-5xl flex flex-col md:flex-row bg-white rounded-2xl shadow-2xl overflow-hidden">
-        {/* Left Side - Gradient with Logo */}
         <div className="bg-gradient-to-br from-pink-600 to-purple-600 p-8 md:p-12 flex flex-col items-center justify-center md:w-1/3 lg:w-2/5">
           <div className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center text-4xl md:text-5xl mb-4">
             🍰
@@ -26,14 +25,12 @@ export function Login() {
           <p className="text-pink-100 text-sm mt-2 text-center">Bolos Artesanais</p>
         </div>
 
-        {/* Right Side - Login Form */}
         <div className="p-8 md:p-12 flex-1">
           <div className="max-w-md mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Bem-vinda de volta!</h2>
             <p className="text-gray-600 text-sm mb-8">Entre com suas credenciais para acessar o painel</p>
 
             <form onSubmit={handleLogin} className="space-y-6">
-              {/* Email */}
               <div>
                 <label htmlFor="email" className="block text-sm font-bold text-gray-800 mb-2">
                   E-mail
@@ -49,7 +46,6 @@ export function Login() {
                 />
               </div>
 
-              {/* Password */}
               <div>
                 <label htmlFor="password" className="block text-sm font-bold text-gray-800 mb-2">
                   Senha
@@ -65,7 +61,6 @@ export function Login() {
                 />
               </div>
 
-              {/* Remember Me & Forgot Password */}
               <div className="flex items-center justify-between text-sm">
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input
@@ -81,12 +76,10 @@ export function Login() {
                 </button>
               </div>
 
-              {/* Login Button */}
               <Button type="submit" fullWidth size="lg">
                 🔓 Entrar no Painel
               </Button>
 
-              {/* Public Site Link */}
               <div className="text-center pt-4">
                 <button
                   type="button"

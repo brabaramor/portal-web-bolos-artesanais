@@ -35,7 +35,6 @@ export function Home() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      {/* Hero Section */}
       <section className="bg-gradient-to-br from-pink-100 via-purple-50 to-pink-50 px-4 md:px-6 lg:px-8 py-12 md:py-16 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="text-5xl md:text-6xl mb-4">🍰</div>
@@ -51,7 +50,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Featured Products */}
       <section className="px-4 md:px-6 lg:px-8 py-12 md:py-16 bg-white">
         <div className="max-w-full">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-pink-900 mb-8 flex items-center justify-center gap-2">
@@ -69,7 +67,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-4 md:px-6 lg:px-8 py-12 md:py-16 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">

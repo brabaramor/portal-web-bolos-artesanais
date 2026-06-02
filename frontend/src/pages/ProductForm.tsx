@@ -19,7 +19,7 @@ export function ProductForm() {
   const { id } = useParams();
   const isEditing = !!id;
 
-  // Mock data for editing - replace with API call
+  // Dados mockados pra teste
   const [formData, setFormData] = useState<ProductFormData>({
     name: '',
     description: '',
@@ -54,7 +54,7 @@ export function ProductForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement save logic (API call)
+    // Implementar lógica de salvar
     console.log('Saving product:', formData);
     navigate('/admin/produtos');
   };
@@ -65,7 +65,6 @@ export function ProductForm() {
 
       <main className="flex-1 px-4 md:px-6 lg:px-8 py-6 md:py-8">
         <div className="max-w-4xl mx-auto">
-          {/* Header */}
           <div className="mb-6">
             <button
               onClick={() => navigate('/admin/produtos')}
@@ -79,10 +78,8 @@ export function ProductForm() {
             </h1>
           </div>
 
-          {/* Form Card */}
           <div className="bg-white rounded-xl shadow-sm p-6 md:p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Product Name */}
               <div>
                 <label htmlFor="name" className="block text-sm font-bold text-gray-800 mb-2">
                   Nome do Produto *
@@ -99,7 +96,6 @@ export function ProductForm() {
                 />
               </div>
 
-              {/* Description */}
               <div>
                 <label htmlFor="description" className="block text-sm font-bold text-gray-800 mb-2">
                   Descrição *
@@ -116,7 +112,6 @@ export function ProductForm() {
                 />
               </div>
 
-              {/* Price and Category */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="price" className="block text-sm font-bold text-gray-800 mb-2">
@@ -156,7 +151,6 @@ export function ProductForm() {
                 </div>
               </div>
 
-              {/* Size and Image */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="size" className="block text-sm font-bold text-gray-800 mb-2">
@@ -191,7 +185,6 @@ export function ProductForm() {
                 </div>
               </div>
 
-              {/* Preview */}
               <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
                 <p className="text-xs font-bold text-gray-600 mb-4 uppercase tracking-wide">
                   Pré-visualização do Card
@@ -236,7 +229,6 @@ export function ProductForm() {
                 </div>
               </div>
 
-              {/* Actions */}
               <div className="flex flex-col-reverse md:flex-row gap-4 pt-4 border-t border-gray-200">
                 <button
                   type="button"

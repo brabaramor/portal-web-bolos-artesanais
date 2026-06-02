@@ -9,7 +9,6 @@ export function AdminHeader() {
 
   return (
     <>
-      {/* Desktop/Tablet Header */}
       <header className="hidden md:block bg-gray-900 text-white">
         <div className="container mx-auto px-6 py-6 flex justify-between items-center">
           <Link to="/admin/produtos" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
@@ -46,7 +45,6 @@ export function AdminHeader() {
         </div>
       </header>
 
-      {/* Mobile Header */}
       <header className="md:hidden bg-gray-900 text-white relative z-40">
         <div className="px-4 h-14 flex items-center justify-between">
           <Link to="/admin/produtos" className="flex items-center gap-2">
@@ -76,7 +74,6 @@ export function AdminHeader() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {menuOpen && (
           <div className="absolute left-0 right-0 bg-white shadow-2xl border-t-2 border-pink-100 z-50">
             <nav className="flex flex-col">

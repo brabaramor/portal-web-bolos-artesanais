@@ -37,7 +37,6 @@ export function Order() {
       return;
     }
 
-    // Simular criação de pedido
     const orderId = Math.floor(Math.random() * 9000) + 1000;
     navigate(`/confirmacao/${orderId}`, { state: { orderData: formData } });
   };
@@ -50,7 +49,6 @@ export function Order() {
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Header />
 
-      {/* Hero Header */}
       <div className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-4 md:px-6 lg:px-8 py-8 md:py-10 text-center">
         <div className="w-12 md:w-16 h-12 md:h-16 bg-white rounded-full flex items-center justify-center text-2xl md:text-3xl mx-auto mb-3">
           🍰
@@ -59,10 +57,8 @@ export function Order() {
         <p className="text-pink-100 text-sm md:text-base">Preencha os dados abaixo para realizar seu pedido</p>
       </div>
 
-      {/* Form */}
       <div className="flex-1 px-4 md:px-6 lg:px-8 py-6 md:py-8">
         <form onSubmit={handleSubmit} className="max-w-4xl mx-auto space-y-6">
-          {/* Escolha do Bolo */}
           <div>
             <label className="block font-bold text-gray-800 mb-2 text-sm md:text-base">
               Escolha o Bolo <span className="text-pink-600">*</span>
@@ -81,7 +77,6 @@ export function Order() {
             </select>
           </div>
 
-          {/* Tamanho */}
           <div>
             <label className="block font-bold text-gray-800 mb-3 text-sm md:text-base">
               Tamanho <span className="text-pink-600">*</span>
@@ -117,7 +112,6 @@ export function Order() {
             </div>
           </div>
 
-          {/* Data e Horário */}
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <label className="block font-bold text-gray-800 mb-2 text-sm md:text-base">
@@ -144,7 +138,6 @@ export function Order() {
             </div>
           </div>
 
-          {/* Observações */}
           <div>
             <label className="block font-bold text-gray-800 mb-2 text-sm md:text-base">Observações</label>
             <textarea
@@ -156,7 +149,6 @@ export function Order() {
             />
           </div>
 
-          {/* Dados do Cliente */}
           <div className="border-t-2 border-gray-200 pt-6">
             <h3 className="font-bold text-pink-900 mb-4 text-base md:text-lg">Seus Dados</h3>
             <div className="space-y-4">
@@ -201,7 +193,6 @@ export function Order() {
             </div>
           </div>
 
-          {/* LGPD Consent */}
           <div className="bg-blue-50 border-2 border-blue-300 rounded-xl p-4">
             <label className="flex items-start gap-3 cursor-pointer">
               <input
@@ -220,7 +211,6 @@ export function Order() {
             </label>
           </div>
 
-          {/* Buttons */}
           <div className="flex flex-col md:flex-row gap-4 pt-4">
             <button
               type="button"

@@ -48,7 +48,6 @@ export function AdminOrders() {
 
       <main className="flex-1 px-4 md:px-6 lg:px-8 py-6 md:py-8">
         <div className="max-w-7xl mx-auto">
-          {/* Header Section */}
           <div className="mb-6 md:mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <h1 className="text-2xl md:text-3xl font-bold text-pink-900">Gerenciar Pedidos</h1>
             <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-bold shadow-md transition-all text-sm md:text-base whitespace-nowrap flex items-center justify-center gap-2">
@@ -57,10 +56,8 @@ export function AdminOrders() {
             </button>
           </div>
 
-          {/* Filters Section - Desktop/Tablet */}
           <div className="hidden md:block bg-white rounded-xl shadow-sm p-6 mb-6">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {/* Status Filter */}
               <div>
                 <label className="block text-sm font-bold text-gray-800 mb-2">Status</label>
                 <select
@@ -76,7 +73,6 @@ export function AdminOrders() {
                 </select>
               </div>
 
-              {/* Start Date */}
               <div>
                 <label className="block text-sm font-bold text-gray-800 mb-2">Data Inicial</label>
                 <input
@@ -88,7 +84,6 @@ export function AdminOrders() {
                 />
               </div>
 
-              {/* End Date */}
               <div>
                 <label className="block text-sm font-bold text-gray-800 mb-2">Data Final</label>
                 <input
@@ -100,7 +95,6 @@ export function AdminOrders() {
                 />
               </div>
 
-              {/* Search */}
               <div>
                 <label className="block text-sm font-bold text-gray-800 mb-2">Buscar</label>
                 <div className="relative">
@@ -119,7 +113,6 @@ export function AdminOrders() {
             </div>
           </div>
 
-          {/* Filters Section - Mobile */}
           <div className="md:hidden bg-white rounded-xl shadow-sm p-4 mb-4 space-y-4">
             <div className="grid grid-cols-2 gap-3">
               <div>
@@ -166,7 +159,6 @@ export function AdminOrders() {
             </button>
           </div>
 
-          {/* Orders List - Desktop/Tablet */}
           <div className="hidden md:grid md:grid-cols-2 gap-6 mb-8">
             {mockOrders.map((order) => (
               <div key={order.id} className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
@@ -207,7 +199,6 @@ export function AdminOrders() {
             ))}
           </div>
 
-          {/* Orders List - Mobile */}
           <div className="md:hidden space-y-3 mb-6">
             {mockOrders.map((order) => (
               <div key={order.id} className="bg-white rounded-xl shadow-sm p-4">

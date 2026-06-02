@@ -38,7 +38,6 @@ export function OrderDetails() {
 
       <main className="flex-1 px-4 md:px-6 lg:px-8 py-6 md:py-8">
         <div className="max-w-4xl mx-auto">
-          {/* Header */}
           <div className="mb-6">
             <button
               onClick={() => navigate('/admin/pedidos')}
@@ -60,9 +59,7 @@ export function OrderDetails() {
             </div>
           </div>
 
-          {/* Desktop/Tablet Layout */}
           <div className="hidden md:grid md:grid-cols-2 gap-6">
-            {/* Left Column - Order Info */}
             <div className="bg-white rounded-xl shadow-sm p-6">
               <div className="mb-6">
                 <div className="flex items-center gap-2 text-gray-600 text-sm mb-4">
@@ -148,7 +145,6 @@ export function OrderDetails() {
               </div>
             </div>
 
-            {/* Right Column - Customer Info */}
             <div className="bg-white rounded-xl shadow-sm p-6">
               <div className="flex items-center gap-2 text-gray-600 text-sm mb-6">
                 👤 <span className="font-bold">Dados do Cliente</span>
@@ -182,7 +178,6 @@ export function OrderDetails() {
                 </button>
               </div>
 
-              {/* Actions */}
               <div className="pt-6 border-t border-gray-200">
                 <div className="flex items-center gap-2 text-gray-600 text-sm mb-4">
                   ⚡ <span className="font-bold">Ações</span>
@@ -205,9 +200,7 @@ export function OrderDetails() {
             </div>
           </div>
 
-          {/* Mobile Layout */}
           <div className="md:hidden space-y-4">
-            {/* Order Info Card */}
             <div className="bg-white rounded-xl shadow-sm p-4">
               <div className="flex items-center gap-2 text-gray-600 text-sm mb-4">
                 📋 <span className="font-bold">Informações do Pedido</span>
@@ -281,7 +274,6 @@ export function OrderDetails() {
               </div>
             </div>
 
-            {/* Customer Info Card */}
             <div className="bg-white rounded-xl shadow-sm p-4">
               <div className="flex items-center gap-2 text-gray-600 text-sm mb-4">
                 👤 <span className="font-bold">Dados do Cliente</span>
@@ -316,7 +308,6 @@ export function OrderDetails() {
               </div>
             </div>
 
-            {/* Actions Card */}
             <div className="bg-white rounded-xl shadow-sm p-4">
               <div className="flex items-center gap-2 text-gray-600 text-sm mb-4">
                 ⚡ <span className="font-bold">Ações</span>
