@@ -12,10 +12,10 @@ Projeto desenvolvido para a cadeira de Projeto Integrador - Portal Web no curso 
 
 ### Backend
 
-- Node.js 18 + TypeScript
-- Express 5
+- Node.js 22 + TypeScript
+- Express 4
 - Prisma ORM 5
-- PostgreSQL 14
+- PostgreSQL 16
 
 ---
 
@@ -45,7 +45,7 @@ portal-web-bolos-artesanais/
 
 ### Pré-requisitos
 
-- Node.js 18 LTS
+- Node.js 22 LTS
 - PostgreSQL 14 instalado e rodando localmente
 
 ### Backend
