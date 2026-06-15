@@ -4,17 +4,20 @@ import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import cookieParser from 'cookie-parser';
+import path from 'path';
 import authRoutes from './routes/auth.routes';
 import productRoutes from './routes/products.routes';
 import orderRoutes from './routes/orders.routes';
+import uploadRoutes from './routes/upload.routes';
 
 const app = express();
 const PORT = process.env.PORT || 3333;
 
-app.use(helmet());
+app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
+app.use('/uploads', express.static(path.resolve('uploads')));
 
 app.use(
   '/auth/login',
@@ -28,6 +31,7 @@ app.use(
 app.use('/auth', authRoutes);
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
+app.use('/upload', uploadRoutes);
 
 app.use((_req, res) => {
   res.status(404).json({ error: 'Rota não encontrada' });
