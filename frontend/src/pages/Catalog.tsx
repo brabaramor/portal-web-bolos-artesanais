@@ -32,13 +32,11 @@ export function Catalog() {
 
       <div className="flex-1 bg-gray-50">
         <div className="px-4 md:px-6 lg:px-8 py-6">
-          {/* Page Header */}
           <div className="mb-6">
             <h1 className="text-2xl md:text-3xl font-bold text-pink-900">Nosso Catálogo</h1>
             <p className="text-gray-600 mt-1">{allProducts.length} produtos disponíveis</p>
           </div>
 
-          {/* Mobile Filter Button */}
           <div className="md:hidden mb-4">
             <button
               onClick={() => setFiltersOpen(!filtersOpen)}
@@ -52,12 +50,10 @@ export function Catalog() {
           </div>
 
           <div className="flex flex-col md:flex-row gap-6">
-            {/* Sidebar Filters - Desktop */}
             <aside className="hidden md:block w-64 flex-shrink-0">
               <div className="bg-white rounded-xl shadow p-6 sticky top-6">
                 <h3 className="text-lg font-bold text-pink-900 mb-4">Filtros</h3>
 
-                {/* Sabor */}
                 <div className="mb-6">
                   <h4 className="font-bold text-gray-800 mb-3 text-sm">Sabor</h4>
                   <div className="space-y-2">
@@ -70,7 +66,6 @@ export function Catalog() {
                   </div>
                 </div>
 
-                {/* Tamanho */}
                 <div className="mb-6">
                   <h4 className="font-bold text-gray-800 mb-3 text-sm">Tamanho</h4>
                   <div className="space-y-2">
@@ -89,7 +84,6 @@ export function Catalog() {
               </div>
             </aside>
 
-            {/* Mobile Filters Panel */}
             {filtersOpen && (
               <div className="md:hidden bg-white rounded-xl shadow p-4 mb-4">
                 <div className="flex items-center justify-between mb-4">
@@ -98,7 +92,6 @@ export function Catalog() {
                 </div>
 
                 <div className="space-y-4">
-                  {/* Sabores */}
                   <div>
                     <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Sabor</p>
                     <div className="flex gap-2 flex-wrap">
@@ -110,7 +103,6 @@ export function Catalog() {
                     </div>
                   </div>
 
-                  {/* Tamanho */}
                   <div>
                     <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-2">Tamanho</p>
                     <div className="grid grid-cols-3 gap-2">
@@ -135,7 +127,6 @@ export function Catalog() {
               </div>
             )}
 
-            {/* Products Grid */}
             <main className="flex-1">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {allProducts.map((product) => (
@@ -148,7 +139,6 @@ export function Catalog() {
                 ))}
               </div>
 
-              {/* Pagination */}
               <div className="flex justify-center gap-2 mt-8">
                 <button className="w-10 h-10 rounded-lg bg-pink-600 text-white font-bold">1</button>
                 <button className="w-10 h-10 rounded-lg bg-white text-gray-700 border border-gray-200 hover:border-pink-400">2</button>

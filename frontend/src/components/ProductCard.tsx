@@ -9,7 +9,6 @@ interface ProductCardProps {
 export function ProductCard({ name, price, image, description, onOrder }: ProductCardProps) {
   return (
     <>
-      {/* Mobile: Layout horizontal */}
       <div className="md:hidden bg-white rounded-xl shadow border border-gray-100 overflow-hidden flex">
         <div className="w-24 bg-gradient-to-br from-pink-200 to-purple-200 flex items-center justify-center text-4xl flex-shrink-0">
           {image}
@@ -35,7 +34,6 @@ export function ProductCard({ name, price, image, description, onOrder }: Produc
         </div>
       </div>
 
-      {/* Tablet e Desktop: Layout vertical */}
       <div className="hidden md:block bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-1">
         <div className="aspect-square bg-gradient-to-br from-pink-200 to-purple-200 flex items-center justify-center text-6xl lg:text-7xl">
           {image}

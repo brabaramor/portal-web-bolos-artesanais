@@ -9,7 +9,6 @@ export function Confirmation() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Success Header */}
       <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 md:px-6 lg:px-8 py-10 md:py-12 text-center">
         <div className="w-16 md:w-20 h-16 md:h-20 bg-white rounded-full flex items-center justify-center text-3xl md:text-4xl mx-auto mb-4 md:mb-5">
           ✅
@@ -18,16 +17,13 @@ export function Confirmation() {
         <p className="text-green-100 text-sm md:text-base">Recebemos sua encomenda com sucesso</p>
       </div>
 
-      {/* Order Details */}
       <div className="px-4 md:px-6 lg:px-8 py-6 md:py-8 max-w-4xl mx-auto">
-        {/* Order Number */}
         <div className="bg-gray-50 rounded-xl p-5 md:p-6 mb-5 md:mb-6 text-center">
           <div className="text-xs md:text-sm text-gray-600 mb-1">Número do Pedido</div>
           <div className="text-4xl md:text-5xl font-bold text-pink-600">#{orderId}</div>
           <div className="text-xs md:text-sm text-gray-500 mt-2">Anote este número para acompanhar seu pedido</div>
         </div>
 
-        {/* Order Info */}
         {orderData && (
           <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
             {[
@@ -56,7 +52,6 @@ export function Confirmation() {
           </div>
         )}
 
-        {/* Next Steps */}
         <div className="bg-blue-50 border-2 border-blue-300 rounded-xl p-4 md:p-5 mb-6 md:mb-8">
           <h3 className="font-bold text-blue-900 mb-3 flex items-center gap-2 text-sm md:text-base">
             <span>📱</span> Próximos Passos
@@ -68,7 +63,6 @@ export function Confirmation() {
           </ul>
         </div>
 
-        {/* Action Buttons */}
         <div className="flex flex-col md:flex-row gap-4">
           <Button
             size="lg"
@@ -79,7 +73,6 @@ export function Confirmation() {
           </Button>
         </div>
 
-        {/* Contact Info */}
         <div className="mt-8 text-center text-sm text-gray-500">
           <p className="mb-1">📱 WhatsApp: (51) 9 8260-6474</p>
           <p>📷 Instagram: @doceencanto</p>
