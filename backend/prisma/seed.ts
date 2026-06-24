@@ -13,15 +13,36 @@ async function main() {
   });
 
   const products = [
-    { name: 'Bolo Red Velvet', description: 'Massa fofinha com recheio de cream cheese', price: 89.90 },
-    { name: 'Bolo de Chocolate', description: 'Ganache 70% cacau, 3 camadas', price: 75.00 },
-    { name: 'Bolo de Morango', description: 'Morangos frescos e chantilly artesanal', price: 82.00 },
-  ];
+  {
+    name: 'Bolo Red Velvet',
+    description: 'Massa fofinha com recheio de cream cheese',
+    price: 89.90,
+    flavor: 'Red Velvet',
+    size: 'Médio'
+  },
+  {
+    name: 'Bolo de Chocolate',
+    description: 'Ganache 70% cacau, 3 camadas',
+    price: 75.00,
+    flavor: 'Chocolate',
+    size: 'Médio'
+  },
+  {
+    name: 'Bolo de Morango',
+    description: 'Morangos frescos e chantilly artesanal',
+    price: 82.00,
+    flavor: 'Morango',
+    size: 'Médio'
+  },
+];
 
   for (const product of products) {
     await prisma.product.upsert({
       where: { name: product.name },
-      update: {},
+      update: {
+        flavor: product.flavor,
+        size: product.size,
+      },
       create: product,
     });
   }
